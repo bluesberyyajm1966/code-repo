@@ -29,15 +29,52 @@
 
   <!-- Content for the dropdown menu page goes here -->
   <pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
+       &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
 
-    &lt;/head&gt;
-    &lt;body&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Home&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;script&gt;
+                        function changeGradient(color1, color2) {
+                            document.body.style.background = 'radial-gradient(circle at top left, ' + color1 + ' 0%, ' + color2 + ' 90%)';
 
-    &lt;/body&gt;
-    &lt;/html&gt;
+                            // Detect if the background is dark and toggle a class
+                            const isDarkBackground = isDarkColor(color2);
+                            document.body.classList.toggle('dark-mode', isDarkBackground);
+
+                            document.querySelectorAll('.dropdown button, .dropdown a').forEach(function (el) {
+                                el.style.backgroundColor = '#CCCCCC'; // Light gray
+
+                                // Adjust text color based on background color
+                                el.style.color = isDarkBackground ? 'white' : '#333333'; // Dark gray
+                            });
+                        }
+
+                        // Helper function to determine if a color is dark
+                        function isDarkColor(color) {
+                            const rgb = color.match(/\d+/g);
+                            if (!rgb) return false;
+                            const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+                            return brightness < 128;
+                        }
+                    &lt;/script&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+
+                    &lt;a href="https://bootlegsnake.netlify.app/"&gt;
+                        &lt;button style="font-size:65px; background-color: #CCCCCC; color: #333333; border-radius:20px; text-align:center;"&gt;snake&lt;/button&gt;
+                    &lt;/a&gt;
+                    &lt;a href="https://bootleg2048.netlify.app/"&gt;
+                        &lt;button style="font-size:65px; background-color: #CCCCCC; color: #333333; border-radius:20px; text-align:center;"&gt;2048&lt;/button&gt;
+                    &lt;/a&gt;
+
+                    &lt;div class="dropdown"&gt;
+                        &lt;button onclick="changeGradient('rgb(300, 197, 61)', 'rgb(255, 94, 7)')"&gt;Settings&lt;/button&gt;
+                        &lt;div class="content"&gt;
+                            &lt;a href="#" onclick="changeGradient('rgb(300, 197, 61)', 'rgb(255, 94, 7)')"&gt;Red&lt;/a&gt;
+                            &lt;a href="#" onclick="changeGradient('rgb(61, 197, 300)', 'rgb(7, 94, 255)
   </pre>
 
 </body>
