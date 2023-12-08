@@ -1,53 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function changeGradient(color1, color2) {
-            document.body.style.background = 'radial-gradient(circle at 10% 20%, ' + color1 + ' 0%, ' + color2 + ' 90%)';
-
-            // Detect if the background is dark and toggle a class
-            const isDarkBackground = isDarkColor(color2);
-            document.body.classList.toggle('dark-mode', isDarkBackground);
-
-            document.querySelectorAll('.dropdown button, .dropdown a').forEach(function (el) {
-                el.style.backgroundColor = color1;
-
-                // Adjust text color based on background color
-                el.style.color = isDarkBackground ? 'white' : 'black';
-            });
-        }
-
-        // Helper function to determine if a color is dark
-        function isDarkColor(color) {
-            const rgb = color.match(/\d+/g);
-            if (!rgb) return false;
-            const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
-            return brightness < 128;
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 2</title>
 </head>
-
 <body>
 
-    <a href="https://bootlegsnake.netlify.app/">
-        <button style="font-size:65px; background-color: red; color:darkorange; border-radius:20px; text-align:center";>snake</button>
-    </a>
-    <a href="https://bootleg2048.netlify.app/">
-        <button style="font-size:65px; background-color: red; color:darkorange; border-radius:20px; text-align:center";>2048</button>
-    </a>
+  <h1>Page 2</h1>
 
-    <div class="dropdown">
-        <button onclick="changeGradient('rgb(300, 197, 61)', 'rgb(255, 94, 7)')">Settings</button>
-        <div class="content">
-            <a href="#" onclick="changeGradient('rgb(300, 197, 61)', 'rgb(255, 94, 7)')">Red</a>
-            <a href="#" onclick="changeGradient('rgb(61, 197, 300)', 'rgb(7, 94, 255)')">Blue</a>
-            <a href="#" onclick="changeGradient('#000000', '#ffffff')">Black and White</a>
-        </div>
-    </div>
+  <!-- Your content for Page 2 goes here -->
+
+  <p><a href="index.html">Home</a></p>
 
 </body>
-
 </html>
