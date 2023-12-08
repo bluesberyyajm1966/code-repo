@@ -10,7 +10,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-        } 
+        }
 
         .html-pane,
         .css-pane {
@@ -41,30 +41,32 @@
 
     <div class="html-pane">
         <h3>HTML (index.html)</h3>
-        <iframe srcdoc="&lt;!DOCTYPE html&gt;
-            &lt;html lang='en'&gt;
-            &lt;head&gt;
-                &lt;meta charset='UTF-8'&gt;
-                &lt;meta name='viewport' content='width=device-width, initial-scale=1.0'&gt;
-                &lt;link rel='stylesheet' href='styles.css'&gt;
-                &lt;title&gt;Simple Dropdown Menu&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;div class='dropdown'&gt;
-                    &lt;button class='dropdown-btn'&gt;Dropdown&lt;/button&gt;
-                    &lt;div class='dropdown-content'&gt;
-                        &lt;a href='#'&gt;Item 1&lt;/a&gt;
-                        &lt;a href='#'&gt;Item 2&lt;/a&gt;
-                        &lt;a href='#'&gt;Item 3&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;" style="border: none;"></iframe>
+        <iframe>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="styles.css">
+                <title>Simple Dropdown Menu</title>
+            </head>
+            <body>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
+                    </div>
+                </div>
+            </body>
+            </html>
+        </iframe>
     </div>
 
     <div class="css-pane">
         <h3>CSS (styles.css)</h3>
-        <iframe src="styles.css" style="border: none;"></iframe>
+        <iframe src="styles.css"></iframe>
     </div>
 
 </body>
