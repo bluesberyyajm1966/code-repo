@@ -1,0 +1,54 @@
+body {
+    background: radial-gradient(circle at top left 10% 20%, rgb(300, 197, 61) 0%, rgb(255, 94, 7) 90%);
+}
+
+/* Add more styles as needed */
+
+.dropdown {
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.dropdown button,
+.dropdown .content button {
+    background-color: #CCCCCC; /* Light gray */
+    color: #333333; /* Dark gray */
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown a,
+.dropdown .content a {
+    display: block;
+    color: #333333; /* Dark gray */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: orange;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px lightorange;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown:hover button,
+.dropdown .content:hover button {
+    background-color: #e4e7e4; /* Darker gray */
+    color: white;
+}
+
+.dropdown a:hover,
+.dropdown .content a:hover {
+    background-color: gray; /* Medium gray */
+}
