@@ -1,4 +1,6 @@
-
+#grad {
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
 button {
   background: #776E65;
   padding: 20px;
